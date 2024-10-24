@@ -5,7 +5,7 @@ six
 terminaltables
 fairscale
 scipy
-yapf
+yapf==0.40.1
 timm
 fvcore
 tensorboard

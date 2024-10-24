@@ -104,8 +104,9 @@ venv.bak/
 # mypy
 .mypy_cache/
 
-data/
-data
+data/pretrained_models/
+data/vehicle/
+# data
 .vscode
 .idea
 .DS_Store

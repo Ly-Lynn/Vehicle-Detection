@@ -1,5 +1,5 @@
 _base_ = [
-    '../_base_/datasets/coco_detection.py',
+    '../_base_/datasets/vehicle_detection.py',
     '../_base_/default_runtime.py'
 ]
 # model settings
@@ -17,7 +17,7 @@ model = dict(
         norm_cfg=dict(type='BN', requires_grad=False),
         norm_eval=True,
         style='pytorch',
-        init_cfg=dict(type='Pretrained', checkpoint='torchvision://resnet50')),
+        init_cfg=dict(type='Pretrained', checkpoint='/co-detr/data/pretrained_models/co_dino_5scale_r50_1x_coco.pth')),
     neck=dict(
         type='ChannelMapper',
         in_channels=[256, 512, 1024, 2048],
@@ -303,8 +303,8 @@ test_pipeline = [
 ]
 
 data = dict(
-    samples_per_gpu=2,
-    workers_per_gpu=2,
+    samples_per_gpu=1,
+    workers_per_gpu=1,
     train=dict(filter_empty_gt=False, pipeline=train_pipeline),
     val=dict(pipeline=test_pipeline),
     test=dict(pipeline=test_pipeline))
@@ -319,9 +319,9 @@ optimizer = dict(
 optimizer_config = dict(grad_clip=dict(max_norm=0.1, norm_type=2))
 # learning policy
 lr_config = dict(policy='step', step=[11])
-runner = dict(type='EpochBasedRunner', max_epochs=12)
+runner = dict(type='EpochBasedRunner', max_epochs=1)
 
 # NOTE: `auto_scale_lr` is for automatically scaling LR,
 # USER SHOULD NOT CHANGE ITS VALUES.
 # base_batch_size = (8 GPUs) x (2 samples per GPU)
-auto_scale_lr = dict(base_batch_size=16)
+auto_scale_lr = dict(base_batch_size=1)

@@ -1,0 +1,3 @@
+[submodule "Co-DETR/mmdetection"]
+	path = Co-DETR/mmdetection
+	url = https://github.com/open-mmlab/mmdetection.git
