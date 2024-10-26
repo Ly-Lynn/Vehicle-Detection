@@ -1,5 +1,5 @@
 _base_ = [
-    '../_base_/datasets/vehicle_detection.py',
+    '../_base_/datasets/vehicle_detection_kaggle.py',
     '../_base_/default_runtime.py'
 ]
 # model settings
