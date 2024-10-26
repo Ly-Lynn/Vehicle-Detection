@@ -29,9 +29,9 @@ if __name__ == "__main__":
     train_path = '/kaggle/Vehicle-Detection/Co-DETR/data/vehicle/train'
     val_path = '/kaggle/Vehicle-Detection/Co-DETR/data/vehicle/val'
     test_path = '/kaggle/Vehicle-Detection/Co-DETR/data/vehicle/test'
-    json_train = '/kaggle/Vehicle-Detection/Co-DETR/data/vehicle/anotations/train_annotations.coco.json'
-    json_val = '/kaggle/Vehicle-Detection/Co-DETR/data/vehicle/anotations/val_annotations.coco.json'
-    json_test = '/kaggle/Vehicle-Detection/Co-DETR/data/vehicle/anotations/test_annotations.coco.json'
+    json_train = '/kaggle/Vehicle-Detection/Co-DETR/data/vehicle/annotations/train_annotations.coco.json'
+    json_val = '/kaggle/Vehicle-Detection/Co-DETR/data/vehicle/annotations/val_annotations.coco.json'
+    json_test = '/kaggle/Vehicle-Detection/Co-DETR/data/vehicle/annotations/test_annotations.coco.json'
 
     coco_annotation_path = '/kaggle/input/track1-traffic-vehicle-detection/daytime/daytime/_annotations.coco.json'
 
