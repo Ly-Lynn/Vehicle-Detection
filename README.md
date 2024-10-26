@@ -6,3 +6,8 @@
 
 **for example:** model Co-DINO	R50	12	DETR	COCO	52.1 => modify file `\Co-DETR\projects\configs\co_dino\co_dino_5scale_r50_1x_coco.py`
 
+3/ run train detector
+
+```bash
+bash tools/dist_train.sh projects/configs/co_dino/co_dino_5scale_r50_1x_coco.py 2 outputs
+```
