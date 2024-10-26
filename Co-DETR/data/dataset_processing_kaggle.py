@@ -22,7 +22,7 @@ def save_coco_split(file_path, images, annotations, coco_data):
 def move_images(image_list, source_folder, dest_folder):
     for image in image_list:
         image_file = image['file_name']
-        shutil.move(os.path.join(source_folder, image_file), os.path.join(dest_folder, image_file))
+        shutil.copy(os.path.join(source_folder, image_file), os.path.join(dest_folder, image_file))
 
 
 if __name__ == "__main__":
